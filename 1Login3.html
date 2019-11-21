@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <script src="vue.js"></script>
+  <title>ログイン|動画ライブ|ｍｙＳＴＶ|ＳＴＶ</title>
+
+</head>
+<body>
+<div style="background-color:#f1f1f1;">
+    <h1 style="font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 10px 7px;
+    margin: 10px 0;
+    color: #e6001f;
+    border-top: 2px solid #e6001f;
+    border-bottom: 2px solid #e6001f;
+    background-color: #fff;
+">ｍｙＳＴＶ　動画ライブ配信</h1>
+<h3 style="display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;"><span>動画ライブ配信ログイン<span></h3>
+
+<div>
+  <ul id="menulist-1">
+    <li v-for="item in items">
+        {{ item.message }}
+    <li>
+  </ul>
+  <ul id="menulist-2">
+    <li v-for="item in items">
+        <span>
+        </span>
+      <button>
+        <span>
+          <img style="margin:13px;" src={{ item.icon }}>
+        </span>
+        <span>{{ item.message }}でログイン</span>
+      </button>
+    <li>
+  </ul>
+</div>
+</form>
+
+
+<script>
+var menulist-1 = new Vuw({
+  el: '#menulist-1',
+  data: {
+    items: [
+      { message: 'facebook' },
+      { message: 'Twitter' }
+    ]
+  }
+})
+var menulist-2 = new Vuw({
+  el: '#menulist-2',
+  data: {
+    items: [
+      { icon: 'icon_facebook.png',message: 'facebook' },
+      { icon: 'icon_twitter.png',message: 'Twitter' }
+    ]
+  }
+})
+</script>
+</body>
+</html>
