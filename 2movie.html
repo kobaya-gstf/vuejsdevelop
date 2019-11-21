@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>動画|動画ライブ|ｍｙＳＴＶ|ＳＴＶ</title>
+  <link href="css/video-js.min.css" rel="stylesheet">
+  <script src="js/video.min.js"></script>
+  <script src="js/videojs-contrib-media-sources.min.js"></script>
+  <script src="js/videojs-contrib-hls.min.js"></script>
+</head>
+<body>
+<div style="text-align:center;background-color:#f1f1f1;">
+    <h1 style="font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 10px 7px;
+    margin: 10px 0;
+    color: #e6001f;
+    border-top: 2px solid #e6001f;
+    border-bottom: 2px solid #e6001f;
+    background-color: #fff;
+">ｍｙＳＴＶ　動画ライブ配信</h1>
+<video id="test" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto"
+ width="480" height="240" data-setup="{}">
+  <source src="http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8" type="application/x-mpegURL">
+</video>
+</br>
+<span>〇〇〇〇〇未公開動画（30分）\2,400(税込み)</span></br>
+  <button type="button" v-on:click="login()">ライブ再生購入</button>
+
+</div>
+</body>
+</html>
