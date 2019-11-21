@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="vue.js"></script>
+  <link href="app.a75f7da8.css" rel="stylesheet">
   <title>ログイン|動画ライブ|ｍｙＳＴＶ|ＳＴＶ</title>
 
 </head>
@@ -25,46 +26,42 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;"><span>動画ライブ配信ログイン<span></h3>
+<div id="app" style="text-align:center;">
+  <ul>
+    <li class="firebaseui-list-item">
+    <button class="firebaseui-idp-button mdl-button mdl-js-button mdl-button--raised firebaseui-idp-google firebaseui-id-idp-button">
+      <span class="firebaseui-idp-icon-wrapper">
+        <img class="firebaseui-idp-icon" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg">
+      </span>
+      <span class="firebaseui-idp-text firebaseui-idp-text-long">Googleでログイン</span>
+  </ul>
+  <button type="button" v-on:click="login()">Googleでログイン</button></br>
+  <button type="button" v-on:click="login()">
+    <span>
+      <img style="margin:13px;" src="icon_facebook.png" alt="twitter">
+    </span>
+    <span class="firebaseui-idp-text firebaseui-idp-text-long">facebookでログイン</span>
+  </button></br>
+  <button type="button" v-on:click="login()">
+    <span>
+      <img style="margin:13px;" src="icon_twitter.png" alt="twitter">
+    </span>
+    <span class="firebaseui-idp-text firebaseui-idp-text-long">Twitterでログイン</span>
+  </button>
 
-<div>
-  <ul id="menulist-1">
-    <li v-for="item in items">
-        {{ item.message }}
-    <li>
-  </ul>
-  <ul id="menulist-2">
-    <li v-for="item in items">
-        <span>
-        </span>
-      <button>
-        <span>
-          <img style="margin:13px;" src={{ item.icon }}>
-        </span>
-        <span>{{ item.message }}でログイン</span>
-      </button>
-    <li>
-  </ul>
 </div>
 </form>
 
-
 <script>
-var menulist-1 = new Vuw({
-  el: '#menulist-1',
+new Vue({
+  el: '#app',
   data: {
-    items: [
-      { message: 'facebook' },
-      { message: 'Twitter' }
-    ]
-  }
-})
-var menulist-2 = new Vuw({
-  el: '#menulist-2',
-  data: {
-    items: [
-      { icon: 'icon_facebook.png',message: 'facebook' },
-      { icon: 'icon_twitter.png',message: 'Twitter' }
-    ]
+    message: '動画ライブ配信ログイン',
+  },
+  methods: {
+    login() {
+      alert("ログイン成功！")
+    }
   }
 })
 </script>
