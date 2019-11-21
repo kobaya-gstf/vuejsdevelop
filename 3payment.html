@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <script src="vue.js"></script>
+  <title>支払情報|動画ライブ|ｍｙＳＴＶ|ＳＴＶ</title>
+
+</head>
+<body>
+  <form onsubmit="return false">
+    <h1 style="font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 10px 7px;
+    margin: 10px 0;
+    color: #e6001f;
+    border-top: 2px solid #e6001f;
+    border-bottom: 2px solid #e6001f;
+    background-color: #fff;
+">ｍｙＳＴＶ　クレジットカード情報入力</h1>
+<div id="app">
+  <span style="width:150px;">利用カード</span><select size="1" name=""><option value="1">VISA<option></select></br>
+  <span style="width:150px;"> カード番号</span><input v-model="cardno"></br>
+  <span style="width:150px;"> 有効期限</span><input v-model="kigen"></br>
+  <span style="width:150px;"> カード名義</span><input v-model="cardname"></br>
+  <span style="width:150px;"> セキュリティコード</span><input v-model="seccd"></br>
+  <span style="width:150px;"> お支払い方法</span><input v-model="pay"></br>
+  <button type="button" v-on:click="login()">購入確定</button>
+
+</div>
+</form>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    usecard: '',
+    cardno: '',
+    kigen: '',
+    cardname: '',
+    seccd: '',
+    pay: ''
+  },
+  methods: {
+    login() {
+      alert("ログイン成功！")
+    }
+  }
+})
+</script>
+</body>
+</html>
