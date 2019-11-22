@@ -29,7 +29,7 @@
 <div style="text-align:center;">
 <ul id="example-1">
   <div v-for="item in items">
-    <button style="width:400px;height:40px;margin:5px;" v-bind:style="{background:item.bc}">
+    <button style="width:400px;height:40px;margin:5px;" v-bind:style="{color:item.fc;background:item.bc}">
     <span style="font-size:20px;"> {{ item.message }}でログイン </span>
     </button>
   </div>
@@ -43,9 +43,9 @@ var example1 = new Vue({
   el: '#example-1',
   data: {
     items: [
-      { iconpath: 'icon_facebook.png', message: 'Google',bc:'#FF0000' },
-      { iconpath: 'icon_facebook.png', message: 'Facebook',bc:'#0000FF' },
-      { iconpath: 'icon_twitter.png', message: 'Twitter',bc:'#00FF00' }
+      { iconpath: 'icon_facebook.png', message: 'Google',fc:'#FFFFFF',bc:'#FF0000' },
+      { iconpath: 'icon_facebook.png', message: 'Facebook',fc:'#FFFFFF',bc:'#0000FF' },
+      { iconpath: 'icon_twitter.png', message: 'Twitter',fc:'#FFFFFF',bc:'#00FF00' }
     ]
   }
 })
