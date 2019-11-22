@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<div style="background-color:#f1f1f1;">
+<div style="height:400px;background-image:url(bk.png);">
     <h1 style="font-size: 16px;
     font-weight: bold;
     text-align: left;
@@ -26,11 +26,11 @@
     margin-inline-end: 0px;
     font-weight: bold;"><span>動画ライブ配信ログイン<span></h3>
 
-<div style="text-align:center;">
+<div style="top:200px;text-align:center;">
 <ul id="example-1">
   <div v-for="item in items">
     <button style="width:400px;height:40px;margin:5px;" v-bind:style="{color:item.fc,background:item.bc}">
-    <span style="font-size:20px;"> {{ item.message }}でログイン </span>
+    <span><img v-bind:src='item.iconpath'></span><span style="font-size:20px;"> {{ item.message }}でログイン </span>
     </button>
   </div>
 </ul>
@@ -43,9 +43,9 @@ var example1 = new Vue({
   el: '#example-1',
   data: {
     items: [
-      { iconpath: 'icon_facebook.png', message: 'Google',fc:'#FFFFFF',bc:'#FF0000' },
-      { iconpath: 'icon_facebook.png', message: 'Facebook',fc:'#FFFFFF',bc:'#0000FF' },
-      { iconpath: 'icon_twitter.png', message: 'Twitter',fc:'#FFFFFF',bc:'#00FF00' }
+      { iconpath: 'icon_google.jpg', message: 'Google',fc:'#000000',bc:'#FFFFFF' },
+      { iconpath: 'icon_facebook.png', message: 'Facebook',fc:'#FFFFFF',bc:'#3B579D' },
+      { iconpath: 'icon_twitter.png', message: 'Twitter',fc:'#FFFFFF',bc:'#1DA1F2' }
     ]
   }
 })
